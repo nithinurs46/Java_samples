@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+   <session-factory>
+   <property name="hibernate.dialect">
+      org.hibernate.dialect.MySQLDialect
+   </property>
+   <property name="hibernate.connection.driver_class">
+      com.mysql.jdbc.Driver
+   </property>
+
+   <!-- Assume test is the database name -->
+   <property name="hibernate.connection.url">
+      jdbc:mysql://localhost/test
+   </property>
+   <property name="hibernate.connection.username">root</property>
+   <property name="hibernate.connection.password">root</property>
+
+	<property name="show_sql">true</property>
+	
+	<property name="hbm2ddl.auto">update</property> 
+   <!-- List of XML mapping files -->
+   <!-- <mapping resource="model.UserDetails"/> -->
+   
+   <mapping class="hibernate.UserDetails"/>
+   <mapping class="onetoone.UserDetailsOneToOne"/>
+   <mapping class="onetoone.Vehicle"/>
+   <mapping class="onetomany.UserDetailsOneToMany"/>
+   <mapping class="onetomany.VehicleOneToMany"/>
+   <mapping class="manytomany.UserDetailsManyToMany"/>
+   <mapping class="manytomany.VehicleManyToMany"/>
+	<mapping class="inheritance.singletable.UserDetails"/>
+	<mapping class="inheritance.singletable.Vehicle"/>
+	<mapping class="inheritance.singletable.TwoWheeler"/>
+	<mapping class="inheritance.singletable.FourWheeler"/>
+	<mapping class="hql.UserDetailsHQL"/>
+	
+</session-factory>
+</hibernate-configuration>
