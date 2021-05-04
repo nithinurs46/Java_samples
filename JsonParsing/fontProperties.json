@@ -1,0 +1,26 @@
+{
+	"default": {
+		"fontcolor": "#000000",
+		"labelfontcolor": "#000000",
+		"fontcolor_H.1": "#000000",
+		"labelfontcolor_H.1": "#000000",
+		"topTextFontSize": "7pt"
+	},
+	"1035": {
+		"fontcolor": "#592902",
+		"labelfontcolor": "#F5750D",
+		"topTextFontSize": "12pt"
+	},
+	"1102": {
+		"fontcolor": "#FF00F3",
+		"labelfontcolor": "#6EA09D",
+		"fontcolor_H.1": "#808000",
+		"labelfontcolor_H.1": "#FB2F0B",
+		"topTextFontSize": "6pt"
+	},
+	"1041": {
+		"fontcolor": "#EC00FB",
+		"labelfontcolor": "#EC00FB",
+		"topTextFontSize": "7pt"
+	}
+}
