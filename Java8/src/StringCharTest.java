@@ -6,7 +6,7 @@ import java.util.function.Function;
 interface CharCheck {
 	String compareString(String value);
 }
-
+//Pgm to check if 2nd char and last but one char in a string is same or not using Java 8
 public class StringCharTest {
 
 	public static void main(String[] args) {
