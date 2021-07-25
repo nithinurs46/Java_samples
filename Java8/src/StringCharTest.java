@@ -26,7 +26,7 @@ public class StringCharTest {
 			}
 		};
 
-		List<String> temp = Arrays.asList("Defeat", "Meet");
+		List<String> temp = Arrays.asList("Defeat", "Meet", "Feet");
 		temp.forEach(s -> System.out.println(func.apply(s)));
 
 		System.out.println("\n");
@@ -43,6 +43,10 @@ public class StringCharTest {
 			return "No, 2nd and last but one char dont match for input: " + value;
 		};
 		temp.forEach(s -> System.out.println(check.compareString(s)));
+		
+		List<String> matchingChars = temp.stream().filter(value -> value.charAt(1) == value.charAt(value.length() - 2))
+				.collect(Collectors.toList());
+		System.out.println(matchingChars);
 
 	}
 
