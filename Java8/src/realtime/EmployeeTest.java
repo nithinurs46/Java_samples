@@ -135,5 +135,17 @@ public class EmployeeTest {
 		// department he belongs to?
 		Optional<Employee> oldestEmp = employeeList.stream().max(Comparator.comparingInt(Employee::getAge));
 		System.out.println("oldest Employee = " + oldestEmp.get() + "\n");
+		
+		//sum of squares of all odd numbers
+		int[] numbers = { 3, 2, 5, 4 };
+		int sum = Arrays.stream(numbers).filter(i -> i % 2 == 1).map(i -> i * i).reduce(0, (a, b) -> a + b);
+		System.out.println("Sum of squares of all odd numbers:- " + sum);
+		
+		//longest even length word in a sentence.
+		String sentence = "Be not afraid of greatness some are born great, some achieve greatness and some have greatness thrust upon them";
+		String longestEvenWord = Arrays.stream(sentence.split(" ")).filter(s -> s.length() % 2 == 0)
+				.max(Comparator.comparingInt(String::length)).orElse("");
+		System.out.println("longest even length word in a sentence:-" + longestEvenWord);
+		
 	}
 }
